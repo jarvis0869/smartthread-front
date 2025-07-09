@@ -1,0 +1,55 @@
+{
+  "id": "demo-thread-1",
+  "source": "slack",
+  "channel": "#engineering",
+  "participants": [
+    {
+      "id": "john.doe",
+      "name": "John Doe",
+      "role": "Senior Developer"
+    },
+    {
+      "id": "sarah.smith", 
+      "name": "Sarah Smith",
+      "role": "Backend Developer"
+    },
+    {
+      "id": "mike.johnson",
+      "name": "Mike Johnson", 
+      "role": "DevOps Engineer"
+    }
+  ],
+  "messages": [
+    {
+      "id": "msg-1",
+      "author": "john.doe",
+      "authorName": "John Doe",
+      "timestamp": "2024-01-15T10:30:00Z",
+      "content": "We're seeing JWT token validation failures in production. Users are getting logged out unexpectedly."
+    },
+    {
+      "id": "msg-2",
+      "author": "sarah.smith",
+      "authorName": "Sarah Smith", 
+      "timestamp": "2024-01-15T10:32:00Z",
+      "content": "I can reproduce this locally. It seems to happen when tokens are close to expiration."
+    },
+    {
+      "id": "msg-3",
+      "author": "mike.johnson",
+      "authorName": "Mike Johnson",
+      "timestamp": "2024-01-15T10:35:00Z", 
+      "content": "The middleware isn't handling edge cases properly. We need to fix the validation logic."
+    },
+    {
+      "id": "msg-4",
+      "author": "john.doe",
+      "authorName": "John Doe",
+      "timestamp": "2024-01-15T10:40:00Z",
+      "content": "I'll create a fix for this. We should also add better logging so we can track these issues in the future."
+    }
+  ],
+  "createdAt": "2024-01-15T10:30:00Z",
+  "title": "Authentication bug fix discussion",
+  "summary": "Team discussed a critical auth bug affecting user login across multiple environments"
+}

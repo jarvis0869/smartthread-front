@@ -237,9 +237,10 @@ export default function Analytics() {
                   />
                   <Tooltip 
                     contentStyle={{ 
-                      backgroundColor: 'hsl(var(--background))', 
-                      border: '1px solid hsl(var(--border))',
-                      borderRadius: '6px'
+                      backgroundColor: 'white', 
+                      border: '1px solid #e2e8f0',
+                      borderRadius: '6px',
+                      color: '#374151'
                     }}
                   />
                   <Legend />
@@ -292,9 +293,10 @@ export default function Analytics() {
                   </Pie>
                   <Tooltip 
                     contentStyle={{ 
-                      backgroundColor: 'hsl(var(--background))', 
-                      border: '1px solid hsl(var(--border))',
-                      borderRadius: '6px'
+                      backgroundColor: 'white', 
+                      border: '1px solid #e2e8f0',
+                      borderRadius: '6px',
+                      color: '#374151'
                     }}
                   />
                 </PieChart>

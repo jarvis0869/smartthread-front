@@ -144,7 +144,7 @@ const mockTeamData = [
   }
 ];
 
-export default function Teams() {
+function Teams() {
   const [teamMembers, setTeamMembers] = useState<any[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
@@ -160,11 +160,13 @@ export default function Teams() {
   const fetchTeamMembers = async () => {
     try {
       setLoading(true);
+      console.log('Fetching team members from /api/teams...');
       const response = await axios.get('/api/teams');
-      setTeamMembers(response.data);
+      console.log('Teams API response:', response.data);
+      setTeamMembers(Array.isArray(response.data) ? response.data : []);
       setError(null);
     } catch (err) {
-      console.log('Using mock data - backend not available');
+      console.log('Teams API failed, using mock data. Error:', err);
       setTeamMembers(mockTeamData);
       setError(null);
     } finally {
@@ -473,3 +475,5 @@ export default function Teams() {
     </div>
   );
 }
+
+export default Teams;

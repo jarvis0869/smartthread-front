@@ -107,7 +107,7 @@ const mockThreads = [
   }
 ];
 
-export default function Threads() {
+function Threads() {
   const navigate = useNavigate();
   const [threads, setThreads] = useState<any[]>([]);
   const [loading, setLoading] = useState(true);
@@ -123,11 +123,13 @@ export default function Threads() {
   const fetchThreads = async () => {
     try {
       setLoading(true);
+      console.log('Fetching threads from /api/threads...');
       const response = await axios.get('/api/threads');
-      setThreads(response.data);
+      console.log('Threads API response:', response.data);
+      setThreads(Array.isArray(response.data) ? response.data : []);
       setError(null);
     } catch (err) {
-      console.log('Using mock data - backend not available');
+      console.log('Threads API failed, using mock data. Error:', err);
       setThreads(mockThreads);
       setError(null);
     } finally {
@@ -379,3 +381,5 @@ export default function Threads() {
     </div>
   );
 }
+
+export default Threads;
