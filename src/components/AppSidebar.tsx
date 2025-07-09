@@ -29,13 +29,13 @@ const mainItems = [
 ];
 
 const integrationItems = [
+  { title: "Teams", url: "/teams", icon: Users, badge: "8" },
   { title: "Integrations", url: "/integrations", icon: Zap, badge: "3" },
-  { title: "Team", url: "/team", icon: Users, badge: null },
 ];
 
 const settingsItems = [
-  { title: "Settings", url: "/settings", icon: Settings, badge: null },
   { title: "Activity", url: "/activity", icon: Clock, badge: null },
+  { title: "Settings", url: "/settings", icon: Settings, badge: null },
 ];
 
 export function AppSidebar() {
