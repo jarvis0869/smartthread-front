@@ -144,7 +144,7 @@
 @layer components {
   /* Modern button variants */
   .btn-primary {
-    @apply bg-primary hover:bg-primary-hover text-primary-foreground;
+    @apply bg-primary hover:bg-primary/90 text-primary-foreground;
     @apply px-4 py-2 rounded-lg font-medium transition-all duration-200;
     @apply shadow-sm hover:shadow-md;
   }
