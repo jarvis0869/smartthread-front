@@ -1,0 +1,45 @@
+{
+  "name": "thread-processor-backend",
+  "version": "1.0.0",
+  "description": "Backend API for thread processing application",
+  "main": "dist/server.js",
+  "type": "module",
+  "scripts": {
+    "dev": "tsx watch src/server.ts",
+    "build": "tsc",
+    "start": "node dist/server.js",
+    "lint": "eslint src/**/*.ts",
+    "test": "jest"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "cors": "^2.8.5",
+    "helmet": "^7.1.0",
+    "morgan": "^1.10.0",
+    "dotenv": "^16.3.1",
+    "joi": "^17.11.0",
+    "uuid": "^9.0.1",
+    "date-fns": "^3.6.0"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.21",
+    "@types/cors": "^2.8.17",
+    "@types/morgan": "^1.9.9",
+    "@types/node": "^20.8.10",
+    "@types/uuid": "^9.0.7",
+    "@typescript-eslint/eslint-plugin": "^6.9.1",
+    "@typescript-eslint/parser": "^6.9.1",
+    "eslint": "^8.52.0",
+    "tsx": "^4.6.0",
+    "typescript": "^5.2.2"
+  },
+  "keywords": [
+    "api",
+    "backend",
+    "threads",
+    "teams",
+    "analytics"
+  ],
+  "author": "",
+  "license": "MIT"
+}
